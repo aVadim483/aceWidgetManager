@@ -7,16 +7,16 @@
         <lang name="default">Vadim Shemarov (aka aVadim)</lang>
     </author>
     <homepage></homepage>
-    <version>2.0.207</version>
+    <version>2.0.209</version>
     <requires>
         <livestreet>1.0.1</livestreet>
         <plugins>
-            <plugin name="aceAdminPanel" version="2.0" condition=">=">aceadminpanel</plugin>
+            <plugin name="aceAdminPanel" version="2.0.355" condition=">=">aceadminpanel</plugin>
         </plugins>
     </requires>
     <description>
-        <lang name="default">Custom Block Manager for LiveStreet/ACE</lang>
-        <lang name="russian">Пользовательский Менеджер Блоков для LiveStreet/ACE</lang>
+        <lang name="default">Custom Widgets (LS Blocks) Manager for LiveStreet/ACE</lang>
+        <lang name="russian">Пользовательский Менеджер Виджетов (LS Блоков) для LiveStreet/ACE</lang>
     </description>
     <delegate>
         <module></module>

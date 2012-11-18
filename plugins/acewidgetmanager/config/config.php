@@ -3,7 +3,7 @@
  * @Plugin Name: aceWidgetManager
  * @Plugin Id: acewidgetmanager
  * @Plugin URI: 
- * @Description: Custom Block Manager for LiveStreet/ACE
+ * @Description: Custom Widgets (LS Blocks) Manager for LiveStreet/ACE
  * @Version:
  * @Author: Vadim Shemarov (aka aVadim)
  * @Author URI: 
@@ -23,7 +23,7 @@ You can set any configurations you need on config.local.php
 if (defined('WIDGETMANAGER_VERSION')) return array();
 
 define('WIDGETMANAGER_VERSION', '2.0');
-define('WIDGETMANAGER_VERSION_BUILD', '207');
+define('WIDGETMANAGER_VERSION_BUILD', '209');
 
 $config = array('version' => WIDGETMANAGER_VERSION . '.' . WIDGETMANAGER_VERSION_BUILD);
 
