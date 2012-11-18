@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>
+        <lang name="default">aceWidgetManager</lang>
+    </name>
+    <author>
+        <lang name="default">Vadim Shemarov (aka aVadim)</lang>
+    </author>
+    <homepage></homepage>
+    <version>2.0.207</version>
+    <requires>
+        <livestreet>1.0.1</livestreet>
+        <plugins>
+            <plugin name="aceAdminPanel" version="2.0" condition=">=">aceadminpanel</plugin>
+        </plugins>
+    </requires>
+    <description>
+        <lang name="default">Custom Block Manager for LiveStreet/ACE</lang>
+        <lang name="russian">Пользовательский Менеджер Блоков для LiveStreet/ACE</lang>
+    </description>
+    <delegate>
+        <module></module>
+        <action></action>
+        <template></template>
+        <entity></entity>
+    </delegate>
+</plugin>
