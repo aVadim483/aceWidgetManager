@@ -22,10 +22,10 @@
  *
  *   $config['clear'] = false; // Не сбрасывать блоки
  *
- *   $config['clear'] = array('include'=>'index,blog');
+ *   $config['clear'] = array('on'=>'index,blog');
  *     // Cбрасывать блоки, которые заданы в actions index и blog
  *
- *   $config['clear'] = array('exclude'=>'admin, people, profile');
+ *   $config['clear'] = array('off'=>'admin, people, profile');
  *     // Cбрасывать блоки во всех actions, кроме admin и profile
  *
  * Формат задаваемых путей:
@@ -34,7 +34,7 @@
  *      admin/*     - для всех путей, начинающихся с 'admin/'
  */
 
-$config['clear'] = true;
+$config['clear'] = false;
 
 /**
  * Описание виджета (блока)
@@ -50,8 +50,8 @@ $config['clear'] = true;
  *      'other_parameter' => 123,       // остальные параметры могут быть какие угодно
  *      'yet_another_parameter' => 'abc',   // ...
  *  ),
- *  'include'=>array('admin/*'),    // опции include и exclude такие же, как и для $config['clear']
- *  'exclude'=>array('admin/plugins/*', 'settings/*'),
+ *  'on'=>array('admin/*'),    // опции include и exclude такие же, как и для $config['clear']
+ *  'off'=>array('admin/plugins/*', 'settings/*'),
  *  'display' => 0, // показывать блок или нет, значения:
  *                  //      true или 1 - выводить блок
  *                  //      false или 0 - не выводить блок,
@@ -79,8 +79,8 @@ $config['widgets'][] = array(
         'show_compact_mode' => false, // Выводить пользователей в компактном режиме (не списком)
     ),
     'js' => '___/js/usersonline.js',
-    'include'=>'/,blog/*,personal_blog/*' ,
-    //'exclude'=>array('admin/*', 'settings/*', 'profile/*', 'talk/*', 'people/*'),
+    'on'=>'/,blog/*,personal_blog/*' ,
+    //'off'=>array('admin/*', 'settings/*', 'profile/*', 'talk/*', 'people/*'),
     'display' => 1,  // true - выводить блок, false - не выводить блок,
                         // array('date_from'=>'2011-10-10', 'date_upto'=>'2011-10-20') - выводить с... по...
 );
@@ -100,7 +100,7 @@ $config['widgets'][] = array(
         'text' => 'text1 text1 text1 ',
         'footer' => 'footer1',
     ),
-    //'exclude'=>array('admin/*', 'settings/*', 'profile/*', 'talk/*', 'people/*'),
+    //'off'=>array('admin/*', 'settings/*', 'profile/*', 'talk/*', 'people/*'),
 );
 
 $config['widgets'][] = array(

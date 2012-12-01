@@ -50,12 +50,16 @@ class PluginAcewidgetmanager_ModuleWidget_EntityWidget extends Entity
 
     public function GetInclude()
     {
-        return $this->_getDataOneAsArray('include');
+        $xResult = $this->_getDataOneAsArray('on');
+        if (is_null($xResult)) $xResult = $this->_getDataOneAsArray('include');
+        return $xResult;
     }
 
     public function GetExclude()
     {
-        return $this->_getDataOneAsArray('exclude');
+        $xResult = $this->_getDataOneAsArray('off');
+        if (is_null($xResult)) $xResult = $this->_getDataOneAsArray('exclude');
+        return $xResult;
     }
 
     public function GetName()

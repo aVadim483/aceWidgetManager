@@ -1,2 +1,2 @@
-[v2.0.209; rev.$WCREV$]
-  * Адаптация под LS 1.x
+[v2.0.211; rev.$WCREV$]
+  * minor bugfix

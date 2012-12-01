@@ -2,9 +2,9 @@
 /*---------------------------------------------------------------------------
  * @Plugin Name: aceWidgetManager
  * @Plugin Id: acewidgetmanager
- * @Plugin URI: 
+ * @Plugin URI: http://livestreetcms.com/addons/view/255/
  * @Description: Custom Widget Manager for LiveStreet/ACE
- * @Version:
+ * @Version: 2.0
  * @Author: Vadim Shemarov (aka aVadim)
  * @Author URI: 
  * @LiveStreet Version:

@@ -78,16 +78,27 @@ class PluginAcewidgetmanager_ModuleWidget extends Module
         // проверяем сброс блоков
         if (isset($this->aConfig['clear'])) {
             if (is_array($this->aConfig['clear'])) {
-                if (!isset($this->aConfig['clear']['include']) AND isset($this->aConfig['clear']['exclude'])) {
+                // 'include' - 'on'
+                if (isset($this->aConfig['clear']['include']) AND !isset($this->aConfig['clear']['on'])) {
+                    $this->aConfig['clear']['on'] = $this->aConfig['clear']['include'];
+                    unset($this->aConfig['clear']['include']);
+                }
+                // 'exclude' - 'off'
+                if (isset($this->aConfig['clear']['exclude']) AND !isset($this->aConfig['clear']['off'])) {
+                    $this->aConfig['clear']['off'] = $this->aConfig['clear']['exclude'];
+                    unset($this->aConfig['clear']['exclude']);
+                }
+
+                if (!isset($this->aConfig['clear']['on']) AND isset($this->aConfig['clear']['off'])) {
                     $this->bClearBlocks = true;
                 } else {
                     $this->bClearBlocks = false;
                 }
-                if (isset($this->aConfig['clear']['include'])) {
-                    $this->bClearBlocks = $this->_checkPath($this->aConfig['clear']['include'], $this->bClearBlocks);
+                if (isset($this->aConfig['clear']['on'])) {
+                    $this->bClearBlocks = $this->_checkPath($this->aConfig['clear']['on'], $this->bClearBlocks);
                 }
-                if (isset($this->aConfig['clear']['exclude'])) {
-                    $this->bClearBlocks = ($this->bClearBlocks AND !$this->_checkPath($this->aConfig['clear']['exclude'], false));
+                if (isset($this->aConfig['clear']['off'])) {
+                    $this->bClearBlocks = ($this->bClearBlocks AND !$this->_checkPath($this->aConfig['clear']['off'], false));
                 }
             } else {
                 $this->bClearBlocks = $this->aConfig['clear'];
