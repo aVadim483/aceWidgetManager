@@ -79,7 +79,7 @@ $config['widgets'][] = array(
         'show_compact_mode' => false, // Выводить пользователей в компактном режиме (не списком)
     ),
     'js' => '___/js/usersonline.js',
-    'on'=>'/,blog/*,personal_blog/*' ,
+    'on'=>'/,blog' ,
     //'off'=>array('admin/*', 'settings/*', 'profile/*', 'talk/*', 'people/*'),
     'display' => 1,  // true - выводить блок, false - не выводить блок,
                         // array('date_from'=>'2011-10-10', 'date_upto'=>'2011-10-20') - выводить с... по...

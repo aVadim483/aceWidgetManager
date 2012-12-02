@@ -23,7 +23,7 @@ You can set any configurations you need on config.local.php
 if (defined('WIDGETMANAGER_VERSION')) return array();
 
 define('WIDGETMANAGER_VERSION', '2.0');
-define('WIDGETMANAGER_VERSION_BUILD', '211');
+define('WIDGETMANAGER_VERSION_BUILD', '212');
 
 $config = array('version' => WIDGETMANAGER_VERSION . '.' . WIDGETMANAGER_VERSION_BUILD);
 

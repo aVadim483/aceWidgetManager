@@ -37,6 +37,12 @@ class PluginAcewidgetmanager_ModuleWidget extends Module
 
     protected function _inPath($aPaths)
     {
+        // пути типа 'action/event' приводим к виду 'action/event/*'
+        foreach($aPaths as $nKey => $sPath) {
+            if (!in_array(substr($sPath, -1), array('/', '*'))) {
+                $aPaths[$nKey] = $sPath . '/*';
+            }
+        }
         return ACE::InPath($this->sCurentPath, $aPaths);
     }
 
